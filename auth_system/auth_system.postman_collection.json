@@ -1,0 +1,797 @@
+{
+	"info": {
+		"_postman_id": "066b00f6-b45f-4f2d-9ad1-16df08de7b12",
+		"name": "auth_system",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28831561"
+	},
+	"item": [
+		{
+			"name": "sign-up",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"first_name\": \"John\",\n  \"last_name\": \"Doe\",\n  \"email\": \"john.doe@example.com\",\n  \"password\": \"Password123!\",\n  \"confirm_password\": \"Password123!\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6000/api/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "sign-up",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"first_name\": \"Aditya\",\n  \"last_name\": \"Doe\",\n  \"email\": \"adityapatidar243@gmail.com\",\n  \"password\": \"Password123!\",\n  \"confirm_password\": \"Password123!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6000/api/auth/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"api",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:5173"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "448"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1c0-LjhIg3vHQx54RM6rvKDX0qYQ6z8\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 17 Jun 2025 17:43:04 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"User registered successfully\",\n    \"data\": {\n        \"user\": {\n            \"id\": 1,\n            \"uuid\": \"30ef5308-9373-4ade-9efb-e977c431a598\",\n            \"first_name\": \"John\",\n            \"last_name\": \"Doe\",\n            \"email\": \"john.doe@example.com\"\n        },\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXVpZCI6IjMwZWY1MzA4LTkzNzMtNGFkZS05ZWZiLWU5NzdjNDMxYTU5OCIsImVtYWlsIjoiam9obi5kb2VAZXhhbXBsZS5jb20iLCJpYXQiOjE3NTAxODIxODQsImV4cCI6MTc1MDc4Njk4NH0.nMuATWNXc4qdcR9MlkcppZ7YSvB3z8qzKzrBOP5EHB0\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "auth-login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"john.doe@example.com\",\n  \"password\": \"Password123!\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "auth-login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"adityapatidar243@gmail.com\",\n  \"password\": \"Password123!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:5173"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "436"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1b4-Cjn6OmG7YSf1BgWI7teEXqTo3Kw\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 17 Jun 2025 17:46:13 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"Login successful\",\n    \"data\": {\n        \"user\": {\n            \"id\": 1,\n            \"uuid\": \"30ef5308-9373-4ade-9efb-e977c431a598\",\n            \"first_name\": \"John\",\n            \"last_name\": \"Doe\",\n            \"email\": \"john.doe@example.com\"\n        },\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXVpZCI6IjMwZWY1MzA4LTkzNzMtNGFkZS05ZWZiLWU5NzdjNDMxYTU5OCIsImVtYWlsIjoiam9obi5kb2VAZXhhbXBsZS5jb20iLCJpYXQiOjE3NTAxODIzNzMsImV4cCI6MTc1MDc4NzE3M30.MzZnW_5I9n1-cpzZimahGZd20s0XVT_hsb2yiw_fQME\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "get-user-profile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXVpZCI6IjBjYzVjOWU3LTQ1MWYtNGQxMy05ZDE0LTJmZWU1YWViN2E1ZiIsImVtYWlsIjoiYWRpdHlhcGF0aWRhcjI0M0BnbWFpbC5jb20iLCJpYXQiOjE3NTAxODI4NTYsImV4cCI6MTc1MDc4NzY1Nn0.u2FBZjDpC9JnFXoDGRkyA36TR8sar-s-FlPgUzQ9scE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXVpZCI6IjBjYzVjOWU3LTQ1MWYtNGQxMy05ZDE0LTJmZWU1YWViN2E1ZiIsImVtYWlsIjoiYWRpdHlhcGF0aWRhcjI0M0BnbWFpbC5jb20iLCJpYXQiOjE3NTAxODI4NTYsImV4cCI6MTc1MDc4NzY1Nn0.u2FBZjDpC9JnFXoDGRkyA36TR8sar-s-FlPgUzQ9scE\",\n  \"password\": \"NewPassword123!\",\n  \"confirm_password\": \"NewPassword123!\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6000/api/user/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"api",
+						"user",
+						"profile"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get-user-profile",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXVpZCI6IjBjYzVjOWU3LTQ1MWYtNGQxMy05ZDE0LTJmZWU1YWViN2E1ZiIsImVtYWlsIjoiYWRpdHlhcGF0aWRhcjI0M0BnbWFpbC5jb20iLCJpYXQiOjE3NTAxODI4NTYsImV4cCI6MTc1MDc4NzY1Nn0.u2FBZjDpC9JnFXoDGRkyA36TR8sar-s-FlPgUzQ9scE\",\n  \"password\": \"NewPassword123!\",\n  \"confirm_password\": \"NewPassword123!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/user/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user",
+								"profile"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:5173"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "266"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"10a-E10KUjorlNHPC7BaquSNvx24L/k\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 18 Jun 2025 03:56:20 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"User profile retrieved successfully\",\n    \"data\": {\n        \"user\": {\n            \"id\": 2,\n            \"uuid\": \"0cc5c9e7-451f-4d13-9d14-2fee5aeb7a5f\",\n            \"first_name\": \"John\",\n            \"last_name\": \"Doe\",\n            \"email\": \"adityapatidar243@gmail.com\",\n            \"is_verified\": 0,\n            \"created_at\": \"2025-06-17T12:19:38.000Z\"\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "forgot-password",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" : \"adityapatidar243@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6000/api/auth/forgot-password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"api",
+						"auth",
+						"forgot-password"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "forgot-password",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\" : \"adityapatidar243@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6000/api/auth/forgot-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"api",
+								"auth",
+								"forgot-password"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:5173"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "90"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"5a-KQ6Sbt9bXzcfrLaBGZ+yowV/hNg\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 18 Jun 2025 04:20:29 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"OTP has been sent to your email. It will expire in 5 minutes.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "verify-otp",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"adityapatidar243@gmail.com\",\n  \"otp\": \"347984\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6000/api/auth/verify-otp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"api",
+						"auth",
+						"verify-otp"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "verify-otp",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"adityapatidar243@gmail.com\",\n  \"otp\": \"347984\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6000/api/auth/verify-otp",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"api",
+								"auth",
+								"verify-otp"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:5173"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "88"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"58-WX+nTnErf25zPHduVbGampC8hlQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 18 Jun 2025 04:22:55 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"OTP verified successfully. You can now reset your password.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "reset-password",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"adityapatidar243@gmail.com\",\n  \"otp\": \"347984\",\n  \"currentPassword\": \"NewPassword123!\",\n  \"newPassword\": \"Password123!\",\n  \"confirmNewPassword\": \"Password123!\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6000/api/auth/reset-password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"api",
+						"auth",
+						"reset-password"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "reset-password",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"adityapatidar243@gmail.com\",\n  \"otp\": \"347984\",\n  \"currentPassword\": \"NewPassword123!\",\n  \"newPassword\": \"Password123!\",\n  \"confirmNewPassword\": \"Password123!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/auth/reset-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"reset-password"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:5173"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "65"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"41-eCNBSpeVy/DNGOsQ58kBWhOIjHw\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 18 Jun 2025 04:24:46 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"Password has been reset successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "update-user-profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXVpZCI6IjBjYzVjOWU3LTQ1MWYtNGQxMy05ZDE0LTJmZWU1YWViN2E1ZiIsImVtYWlsIjoiYWRpdHlhcGF0aWRhcjI0M0BnbWFpbC5jb20iLCJpYXQiOjE3NTAyMjExMzAsImV4cCI6MTc1MDgyNTkzMH0.HtOiqU9w-2WvlR9aMgw8jW0uFNylTFrvhux4kUAqNhY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"first_name\": \"Aditya\",\n  \"last_name\": \"Doe\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6000/api/user/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"api",
+						"user",
+						"profile"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "update-user-profile",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"first_name\": \"Aditya\",\n  \"last_name\": \"Doe\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6000/api/user/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"api",
+								"user",
+								"profile"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:5173"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "221"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"dd-iaEH8MADMs46/LPtrdABL8VzSlk\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 18 Jun 2025 04:32:33 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"Profile updated successfully\",\n    \"data\": {\n        \"user\": {\n            \"id\": 2,\n            \"uuid\": \"0cc5c9e7-451f-4d13-9d14-2fee5aeb7a5f\",\n            \"first_name\": \"Aditya\",\n            \"last_name\": \"Doe\",\n            \"email\": \"adityapatidar243@gmail.com\",\n            \"is_verified\": 0\n        }\n    }\n}"
+				}
+			]
+		}
+	]
+}
